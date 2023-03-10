@@ -4,3 +4,33 @@ Fri 10 Mar 2023 12:05:04 PM UTC:
  tests:  1|6
 total_score: 10/70
 240194f
+Fri 10 Mar 2023 12:16:19 PM UTC: 
+ exercises.c | 18 ++++++++++++++++--
+ 1 file changed, 16 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘cmp’:
+exercises.c:36:12: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   36 |     return 1;
+      |            ^
+exercises.c:29:6: note: declared here
+   29 | void cmp(const void *Pv, const void *El)
+      |      ^~~
+exercises.c:38:10: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   38 |   return 0;
+      |          ^
+exercises.c:29:6: note: declared here
+   29 | void cmp(const void *Pv, const void *El)
+      |      ^~~
+exercises.c: In function ‘arrayMaxMin’:
+exercises.c:42:25: error: passing argument 4 of ‘qsort’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+   42 |   qsort(a,n,sizeof(int),cmp);
+      |                         ^~~
+      |                         |
+      |                         void (*)(const void *, const void *)
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:839:34: note: expected ‘__compar_fn_t’ {aka ‘int (*)(const void *, const void *)’} but argument is of type ‘void (*)(const void *, const void *)’
+  839 |                    __compar_fn_t __compar) __nonnull ((1, 4));
+      |                    ~~~~~~~~~~~~~~^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+712a203

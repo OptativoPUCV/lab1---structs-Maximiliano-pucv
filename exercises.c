@@ -25,9 +25,23 @@ Programe la función void arrayMaxMin(int *a, int n, int *max, int *min),
 la cual encuentra el máximo y el mínimo valor del arreglo a y los
 almacena en las variables apuntadas por max y min.
 */
+
+void cmp(const void *Pv, const void *El)
+{
+  int *pivote = (int *)Pv;
+  int *elemen = (int *)El;
+
+  if(*pivote > *elemen)
+  {
+    return 1;
+  }
+  return 0;
+}
+
 void arrayMaxMin(int *a, int n, int *max, int *min) {
-  //for()
-    
+  qsort(a,n,sizeof(int),cmp);
+  *min = a[0];
+  *max = a[n-1];
 }
 
 
