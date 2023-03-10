@@ -26,7 +26,7 @@ la cual encuentra el máximo y el mínimo valor del arreglo a y los
 almacena en las variables apuntadas por max y min.
 */
 
-void cmp(const void *Pv, const void *El)
+int cmp(const void *Pv, const void *El)
 {
   int *pivote = (int *)Pv;
   int *elemen = (int *)El;

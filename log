@@ -34,3 +34,9 @@ In file included from test.c:2:
 cc1: all warnings being treated as errors
 Compilation failed
 712a203
+Fri 10 Mar 2023 12:16:37 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  2|5
+total_score: 20/70
+530483c
