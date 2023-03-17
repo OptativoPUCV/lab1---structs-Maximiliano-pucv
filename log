@@ -275,3 +275,20 @@ exercises.c:88:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 1cff7e0
+Fri 17 Mar 2023 11:36:06 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearVector’:
+exercises.c:87:4: error: expected expression before ‘return’
+   87 |    return NULL;
+      |    ^~~~~~
+exercises.c:86:11: error: unused variable ‘Vc’ [-Werror=unused-variable]
+   86 |   Vector *Vc =
+      |           ^~
+exercises.c:88:1: error: control reaches end of non-void function [-Werror=return-type]
+   88 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+c9fe190
