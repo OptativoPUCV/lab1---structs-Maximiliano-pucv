@@ -344,3 +344,16 @@ Fri 17 Mar 2023 11:38:54 AM UTC:
  tests:  3|4
 total_score: 30/70
 68f2ee8
+Fri 17 Mar 2023 11:39:15 AM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:65:14: error: invalid type argument of ‘->’ (have ‘Persona’)
+   65 |   strcpy(p[0]->nombre,nombre);
+      |              ^~
+exercises.c:66:14: error: invalid type argument of ‘->’ (have ‘Persona’)
+   66 |   strcpy(p[0]->rut,rut);
+      |              ^~
+Compilation failed
+3efede0
