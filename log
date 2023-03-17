@@ -88,3 +88,19 @@ exercises.c:65:22: error: ‘p’ is a pointer; did you mean to use ‘->’?
       |                      ->
 Compilation failed
 0274f11
+Fri 17 Mar 2023 11:24:50 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:65:11: error: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘char (*)[30]’ [-Werror=format=]
+   65 |   scanf("%s[29\n]",&p->nombre);
+      |          ~^        ~~~~~~~~~~
+      |           |        |
+      |           char *   char (*)[30]
+exercises.c:65:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   65 |   scanf("%s[29\n]",&p->nombre);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+734af9e
