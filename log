@@ -144,3 +144,30 @@ exercises.c:67:25: error: invalid type argument of ‘->’ (have ‘Persona’)
       |                         ^~
 Compilation failed
 71942dc
+Fri 17 Mar 2023 11:29:00 AM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:65:11: error: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ [-Werror=format=]
+   65 |   scanf("%s[29\n]",*p[0].nombre);
+      |          ~^        ~~~~~~~~~~~~
+      |           |        |
+      |           char *   int
+exercises.c:67:11: error: format ‘%s’ expects argument of type ‘char *’, but argument 2 has type ‘int’ [-Werror=format=]
+   67 |   scanf("%s[10\n]",*p[0].rut);
+      |          ~^        ~~~~~~~~~
+      |           |        |
+      |           char *   int
+exercises.c:65:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   65 |   scanf("%s[29\n]",*p[0].nombre);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exercises.c:67:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   67 |   scanf("%s[10\n]",*p[0].rut);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+exercises.c:65:20: error: ‘*p.nombre[0]’ is used uninitialized [-Werror=uninitialized]
+   65 |   scanf("%s[29\n]",*p[0].nombre);
+      |                    ^~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+0829bf4
