@@ -171,3 +171,17 @@ exercises.c:65:20: error: ‘*p.nombre[0]’ is used uninitialized [-Werror=unin
 cc1: all warnings being treated as errors
 Compilation failed
 0829bf4
+Fri 17 Mar 2023 11:29:22 AM UTC: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:65:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   65 |   scanf("%s[29\n]",p[0].nombre);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+exercises.c:67:3: error: ignoring return value of ‘scanf’ declared with attribute ‘warn_unused_result’ [-Werror=unused-result]
+   67 |   scanf("%s[10\n]",p[0].rut);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+98ae3d0
