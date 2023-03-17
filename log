@@ -462,3 +462,28 @@ exercises.c:91:14: error: assignment to ‘int’ from ‘void *’ makes intege
 cc1: all warnings being treated as errors
 Compilation failed
 8829438
+Fri 17 Mar 2023 11:54:59 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearVector’:
+exercises.c:87:5: error: expected ‘(’ before ‘*’ token
+   87 |   if*Vc == NULL)
+      |     ^
+      |     (
+exercises.c:87:5: error: statement with no effect [-Werror=unused-value]
+   87 |   if*Vc == NULL)
+      |     ^~~
+exercises.c:87:3: error: this ‘if’ clause does not guard... [-Werror=misleading-indentation]
+   87 |   if*Vc == NULL)
+      |   ^~
+exercises.c:87:16: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   87 |   if*Vc == NULL)
+      |                ^
+exercises.c:87:16: error: expected statement before ‘)’ token
+exercises.c:91:14: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   91 |   *Vc->datos = calloc(n,sizeof(int));
+      |              ^
+cc1: all warnings being treated as errors
+Compilation failed
+a469b6f
