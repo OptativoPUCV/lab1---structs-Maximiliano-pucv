@@ -89,7 +89,7 @@ Vector * crearVector(int n) {
     return NULL;
   }
   *Vc->datos = calloc(n,sizeof(int));
-  if(*Vc->datos == NULL)
+  if(Vc->datos == NULL)
   {
     return NULL;
   }

@@ -446,3 +446,19 @@ exercises.c:92:17: error: comparison between pointer and integer [-Werror]
 cc1: all warnings being treated as errors
 Compilation failed
 e8c615f
+Fri 17 Mar 2023 11:54:53 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearVector’:
+exercises.c:87:10: error: invalid operands to binary == (have ‘Vector’ and ‘void *’)
+   87 |   if(*Vc == NULL)
+      |      ~~~ ^~
+      |      |
+      |      Vector
+exercises.c:91:14: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   91 |   *Vc->datos = calloc(n,sizeof(int));
+      |              ^
+cc1: all warnings being treated as errors
+Compilation failed
+8829438
