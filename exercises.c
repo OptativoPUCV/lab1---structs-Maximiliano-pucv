@@ -133,8 +133,16 @@ void sumaV(Vector * a, Vector * b, Vector * c) {
 /*
 Ejercicio 8.
 Use las operaciones implementadas de vectores para 
-sumar (a1,a2)+(b1+b2). Almacene el resultado en el vector c.
+sumar (a1,a2)+(b1,b2). Almacene el resultado en el vector c.
+A + B ----- A= ()
 */
 void sumaV2(int a1, int a2, int b1, int b2, Vector *c){
-
+  int largo = 2;
+  Vector *Va = crearVector(largo);
+  Vector *Vb = crearVector(largo);
+  asignarValor(Va, 0, a1);
+  asignarValor(Va, 1, a2);
+  asignarValor(Vb, 0, b1);
+  asignarValor(Vb, 1, b2);
+  sumaV(Va, Vb, c);
 }
