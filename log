@@ -357,3 +357,19 @@ exercises.c:66:14: error: invalid type argument of ‘->’ (have ‘Persona’)
       |              ^~
 Compilation failed
 3efede0
+Fri 17 Mar 2023 11:39:28 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:65:14: error: invalid type argument of ‘->’ (have ‘Persona’)
+   65 |   strcpy(p[0]->nombre,nombre);
+      |              ^~
+exercises.c:66:14: error: invalid type argument of ‘->’ (have ‘Persona’)
+   66 |   strcpy(p[0]->rut,rut);
+      |              ^~
+exercises.c:67:7: error: invalid type argument of ‘->’ (have ‘Persona’)
+   67 |   p[0]->edad = edad;
+      |       ^~
+Compilation failed
+604e367
