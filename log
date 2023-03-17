@@ -398,3 +398,14 @@ exercises.c:86:11: error: unused variable ‘Vc’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 f240ddc
+Fri 17 Mar 2023 11:41:43 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearVector’:
+exercises.c:86:11: error: unused variable ‘Vc’ [-Werror=unused-variable]
+   86 |   Vector *Vc = (Vector*)calloc(n,sizeof(Vector));
+      |           ^~
+cc1: all warnings being treated as errors
+Compilation failed
+150de77
