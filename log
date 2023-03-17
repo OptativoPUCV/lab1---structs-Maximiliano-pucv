@@ -297,3 +297,22 @@ Fri 17 Mar 2023 11:36:17 AM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 59af5db
+Fri 17 Mar 2023 11:37:17 AM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:65:18: error: ‘p’ is a pointer; did you mean to use ‘->’?
+   65 |   strcpy(nombre,p.nombre);
+      |                  ^
+      |                  ->
+exercises.c:66:15: error: ‘p’ is a pointer; did you mean to use ‘->’?
+   66 |   strcpy(rut,p.rut);
+      |               ^
+      |               ->
+exercises.c:67:4: error: ‘p’ is a pointer; did you mean to use ‘->’?
+   67 |   p.edad = edad;
+      |    ^
+      |    ->
+Compilation failed
+864c01f
