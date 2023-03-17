@@ -379,3 +379,22 @@ Fri 17 Mar 2023 11:39:59 AM UTC:
  tests:  3|4
 total_score: 30/70
 0911adf
+Fri 17 Mar 2023 11:41:02 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearVector’:
+exercises.c:86:25: error: too few arguments to function ‘calloc’
+   86 |   Vector *Vc = (Vector*)calloc(sizeof(Vector));
+      |                         ^~~~~~
+In file included from test.c:2:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdlib.h:543:14: note: declared here
+  543 | extern void *calloc (size_t __nmemb, size_t __size)
+      |              ^~~~~~
+In file included from test.c:5:
+exercises.c:86:11: error: unused variable ‘Vc’ [-Werror=unused-variable]
+   86 |   Vector *Vc = (Vector*)calloc(sizeof(Vector));
+      |           ^~
+cc1: all warnings being treated as errors
+Compilation failed
+f240ddc
