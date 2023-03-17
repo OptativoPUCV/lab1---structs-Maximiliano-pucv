@@ -515,3 +515,14 @@ Fri 17 Mar 2023 11:55:22 AM UTC:
  tests:  3|4
 total_score: 30/70
 fed9037
+Fri 17 Mar 2023 11:55:33 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearVector’:
+exercises.c:91:14: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   91 |   *Vc->datos = calloc(n,sizeof(int));
+      |              ^
+cc1: all warnings being treated as errors
+Compilation failed
+ffaf1ce
