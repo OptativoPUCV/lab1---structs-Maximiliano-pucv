@@ -509,3 +509,9 @@ exercises.c:87:16: error: expected statement before ‘)’ token
 cc1: all warnings being treated as errors
 Compilation failed
 6cf60b1
+Fri 17 Mar 2023 11:55:22 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  3|4
+total_score: 30/70
+fed9037
