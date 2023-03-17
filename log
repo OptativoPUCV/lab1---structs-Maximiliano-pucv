@@ -77,3 +77,14 @@ exercises.c:65:3: error: ignoring return value of ‘scanf’ declared with attr
 cc1: all warnings being treated as errors
 Compilation failed
 f25f438
+Fri 17 Mar 2023 11:24:37 AM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:65:22: error: ‘p’ is a pointer; did you mean to use ‘->’?
+   65 |   scanf("%s[29\n]",&p.nombre);
+      |                      ^
+      |                      ->
+Compilation failed
+0274f11
