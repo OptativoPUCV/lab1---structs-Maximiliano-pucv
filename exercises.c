@@ -84,12 +84,12 @@ typedef struct {
 
 Vector * crearVector(int n) {
   Vector *Vc = malloc(sizeof(Vector));
-  if(Vc == NULL)
+  if(*Vc == NULL)
   {
     return NULL;
   }
-  Vc->datos = calloc(n,sizeof(int));
-  if(Vc->datos == NULL)
+  *Vc->datos = calloc(n,sizeof(int));
+  if(*Vc->datos == NULL)
   {
     return NULL;
   }

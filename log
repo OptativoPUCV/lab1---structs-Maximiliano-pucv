@@ -427,3 +427,22 @@ Fri 17 Mar 2023 11:52:47 AM UTC:
  tests:  3|4
 total_score: 30/70
 08ed4b2
+Fri 17 Mar 2023 11:54:44 AM UTC: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearVector’:
+exercises.c:87:10: error: invalid operands to binary == (have ‘Vector’ and ‘void *’)
+   87 |   if(*Vc == NULL)
+      |      ~~~ ^~
+      |      |
+      |      Vector
+exercises.c:91:14: error: assignment to ‘int’ from ‘void *’ makes integer from pointer without a cast [-Werror=int-conversion]
+   91 |   *Vc->datos = calloc(n,sizeof(int));
+      |              ^
+exercises.c:92:17: error: comparison between pointer and integer [-Werror]
+   92 |   if(*Vc->datos == NULL)
+      |                 ^~
+cc1: all warnings being treated as errors
+Compilation failed
+e8c615f
